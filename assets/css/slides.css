@@ -1,0 +1,45 @@
+/* ===================== v6: slide-style motion + alignment ===================== */
+/* rotator pill fits the active word */
+.hero-role .rot{display:inline-block;position:relative;height:1.55em;vertical-align:middle;transition:width .6s var(--ease);white-space:nowrap}
+.hero-role .rot-w{position:absolute;left:12px;top:50%;translate:0 -50%}
+
+/* dark panels slide up and settle like slides */
+[data-slide]{transform-origin:50% 0;will-change:transform}
+
+/* story: one chapter in focus at a time */
+@media (min-width:861px){
+  .chapter .ch-body{transition:opacity .6s var(--ease),transform .8s var(--ease),box-shadow .6s}
+  .chapter:not(.active) .ch-body{opacity:.28;transform:translateX(30px) scale(.97)}
+  .chapter.active .ch-body{box-shadow:0 30px 70px rgba(0,0,0,.08)}
+}
+
+/* work + ventures: stacking slides on desktop */
+@media (min-width:1101px){
+  .case{position:sticky;top:92px;background:var(--paper);border-radius:30px;padding:26px;margin-bottom:28px;box-shadow:0 -18px 50px rgba(0,0,0,.06);border:1px solid var(--line)}
+  .case + .case{margin-top:0}
+  .case-info{position:relative;top:0}
+  .venture{position:sticky;top:96px}
+  .cases,.ventures-stack{position:relative;padding-bottom:30px}
+}
+
+/* runner group logos */
+.case-logos{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.case-logos .case-logo{margin:0;height:34px;max-width:170px}
+.case-sublogo{height:30px;width:auto;border-radius:6px;opacity:.9}
+.ch-logo[src*="logo-runner"]{padding:10px 12px;height:46px;max-width:150px}
+
+/* section heading underline draw */
+.h-xl em{background-image:linear-gradient(var(--yellow),var(--yellow));background-repeat:no-repeat;background-size:0% .12em;background-position:0 92%;transition:background-size 1.2s var(--ease) .5s}
+.split.in em,.h-xl.in em{background-size:100% .12em}
+.ai .h-xl em,.pitch .h-xl em,.video-sec .h-xl em{background-image:linear-gradient(currentColor,currentColor);background-size:0% .06em}
+.ai .split.in em,.pitch .split.in em,.video-sec .split.in em{background-size:100% .06em}
+
+/* gentle float on hero chips already; add fade-up stagger for stat numbers */
+.stat b{display:inline-block}
+
+@media (prefers-reduced-motion:reduce){
+  [data-slide]{transform:none!important}
+  .chapter .ch-body{opacity:1!important;transform:none!important}
+}
+
+@media (max-width:860px){.ch-logo[src*="logo-runner"]{max-width:96px;height:36px;padding:6px 8px}}

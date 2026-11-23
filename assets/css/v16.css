@@ -1,0 +1,86 @@
+/* ===================== v16 ===================== */
+/* hero: off-white, yellow arch, red-glove portrait card */
+.hero-visual{align-items:flex-end}
+.hero-punch{position:relative;z-index:2;margin:0 0 4%;width:min(78%,470px);aspect-ratio:896/1200;border-radius:26px;overflow:hidden;background:#fff;box-shadow:0 40px 90px rgba(0,0,0,.22),0 0 0 8px #fff;opacity:0;transform:translateX(-50px) rotate(-6deg);transition:opacity .8s var(--ease) .5s}
+body.ready .hero-punch{opacity:1;animation:heropunch 1.2s cubic-bezier(.2,.9,.3,1.2) .6s both}
+.hero-punch img{display:block;width:100%;height:100%;object-fit:cover}
+.hero-punch:hover{animation:heroshake .5s ease-out}
+@keyframes heropunch{0%{transform:translateX(-50px) rotate(-6deg)}55%{transform:translateX(12px) rotate(3deg)}72%{transform:translateX(-6px) rotate(.4deg)}86%{transform:translateX(3px) rotate(2deg)}100%{transform:rotate(1.5deg)}}
+@keyframes heroshake{0%,100%{transform:rotate(1.5deg)}25%{transform:translateX(10px) rotate(3.5deg)}50%{transform:translateX(-6px) rotate(0)}75%{transform:translateX(3px) rotate(2.5deg)}}
+.hero-arch{width:min(86%,540px);height:78%}
+@media (max-width:860px){
+  .hero-visual{aspect-ratio:1/1.12;align-items:flex-end}
+  .hero-punch{width:72%;margin-bottom:6%}
+}
+@media (prefers-reduced-motion:reduce){.hero-punch{animation:none!important;opacity:1;transform:rotate(1.5deg)}}
+
+/* intro stats with highlights */
+.stat{position:relative;overflow:hidden;border:1px solid var(--line);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.stat:hover{transform:translateY(-4px);box-shadow:0 24px 50px rgba(0,0,0,.08)}
+.stat::after{content:"";position:absolute;left:24px;right:24px;bottom:0;height:4px;border-radius:4px 4px 0 0;background:var(--orange,#FF5B1F);transform:scaleX(.18);transform-origin:left;transition:transform 1s var(--ease) .3s}
+.stat.in::after{transform:scaleX(1)}
+.st-k{display:inline-block;font:700 11px var(--display);font-style:normal;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:99px;background:var(--paper);color:var(--muted);margin-bottom:14px}
+.stat b{color:var(--ink)}
+.st-tags{display:block;margin-top:12px;font:600 12.5px var(--display);font-style:normal;color:var(--ink);opacity:.75}
+.st-dark{background:var(--ink);border-color:var(--ink)}
+.st-dark b{color:var(--yellow)}.st-dark span{color:rgba(255,255,255,.7)!important}.st-dark .st-k{background:rgba(255,255,255,.1);color:#fff}
+.st-yellow{background:var(--yellow);border-color:var(--yellow)}
+.st-yellow span{color:rgba(30,29,26,.75)!important}.st-yellow .st-k{background:rgba(0,0,0,.08);color:var(--ink)}.st-yellow::after{background:var(--ink)}
+
+/* inspiration strip */
+.inspire{display:grid;grid-template-columns:220px 1fr;gap:clamp(18px,3vw,36px);align-items:center;margin:clamp(26px,4vw,44px) 0 0;padding:14px;border-radius:24px;background:var(--ink);color:#fff;max-width:880px}
+.inspire img{width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 20%;border-radius:16px;filter:grayscale(.15)}
+.inspire figcaption{padding-right:18px}
+.in-k{font:700 11px var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--yellow)}
+.inspire blockquote{margin:10px 0 6px;font:400 clamp(26px,3vw,40px)/1.12 var(--serif);font-style:italic;letter-spacing:-.01em}
+.inspire cite{font:600 13px var(--display);font-style:normal;color:rgba(255,255,255,.55)}
+.inspire p{margin-top:10px;font-size:15px;color:rgba(255,255,255,.75)}
+
+/* official AI logos */
+.duo-logo{background:#fff!important;overflow:hidden;padding:9px}
+.duo-logo img{width:100%;height:100%;object-fit:contain}
+.gpt .duo-logo{padding:0}
+
+/* skill cards with collage images */
+.b-s{display:flex;flex-direction:column;gap:6px;padding:12px 12px 22px!important}
+.s-img{margin:0 0 10px;border-radius:16px;overflow:hidden;aspect-ratio:640/440;background:#ECE8E1}
+.s-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.b-s:hover .s-img img{transform:scale(1.06) rotate(-1deg)}
+.b-s h3,.b-s p{padding:0 8px}
+
+/* contact image + quote */
+.contact-punch .pp-quote{position:absolute;left:14px;right:14px;bottom:14px;text-align:center;font:400 clamp(20px,2vw,28px)/1.1 var(--serif);font-style:italic;color:#111;background:rgba(255,255,255,.93);padding:12px 14px;border-radius:12px}
+.contact-punch img{filter:contrast(1.05)}
+
+@media (max-width:860px){
+  .inspire{grid-template-columns:110px 1fr;padding:10px;gap:14px}
+  .inspire blockquote{font-size:22px}
+  .inspire p{display:none}
+}
+
+/* v16b: reference collages on skill cards, quote image */
+.s-img{aspect-ratio:4/5;background:#e6e3de}
+.s-img img{object-fit:cover}
+.s-img img[src*="skills/digital"]{object-position:50% 50%}
+.s-img img[src*="skills/promotion"]{object-position:50% 40%}
+.s-img img[src*="skills/sales"]{object-position:50% 50%}
+.s-img img[src*="skills/pm"]{object-position:50% 50%}
+
+.inspire{grid-template-columns:minmax(260px,360px) 1fr}
+.inspire img{aspect-ratio:504/446;object-position:50% 50%;filter:none}
+.inspire cite{display:block;margin-top:10px;font-size:15px;color:#fff}
+@media (max-width:860px){.inspire{grid-template-columns:1fr}.inspire p{display:block;font-size:14px}.inspire figcaption{padding:4px 6px 8px}}
+
+/* HAYA campaign images */
+.hy-media.hy2{display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:auto auto;gap:10px}
+.hy2 img{width:100%;border-radius:16px;object-fit:cover;transition:transform .8s var(--ease)}
+.hy2 img:hover{transform:scale(1.02)}
+.hy2 .hy-wide{grid-column:1/-1;aspect-ratio:16/9}
+.hy2 .hy-a{aspect-ratio:1/1;object-position:42% 50%}
+.hy2 .hy-b{aspect-ratio:1/1;object-position:50% 60%}
+@media (max-width:860px){.hy-media.hy2 img.hy-wide{aspect-ratio:16/9;grid-column:1/-1}.hy-media.hy2 img.hy-a,.hy-media.hy2 img.hy-b{aspect-ratio:1/1}}
+
+/* READY poster in contact */
+.contact-punch img{aspect-ratio:900/1612;object-fit:cover;max-height:78vh;width:auto;margin-left:auto}
+.contact-punch{display:flex;justify-content:flex-end}
+@media (max-width:860px){.contact-punch img{max-height:none;width:100%}.contact-punch{width:min(82%,360px)}}

@@ -1,0 +1,118 @@
+/* ===================== v9: Teams (short grid) ===================== */
+.teams{padding-block:clamp(80px,10vw,130px);background:var(--paper)}
+.t-head{display:grid;grid-template-columns:1.3fr .7fr;gap:clamp(24px,4vw,60px);align-items:end}
+.t-head .lead{margin-top:16px}
+.t-hero{margin:0;border-radius:20px;overflow:hidden;background:#111;aspect-ratio:1264/848;clip-path:inset(6% 6% round 20px);transition:clip-path 1.2s var(--ease)}
+.t-hero.in{clip-path:inset(0 0 round 20px)}
+.t-hero img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1)}
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,1.6vw,22px);margin-top:clamp(34px,4.5vw,56px)}
+.t-card{background:var(--card,#fff);border-radius:18px;padding:10px;box-shadow:0 14px 40px rgba(0,0,0,.05);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.t-card:hover{transform:translateY(-4px);box-shadow:0 24px 60px rgba(0,0,0,.1)}
+.t-card figure{margin:0;border-radius:12px;overflow:hidden;background:#111;aspect-ratio:16/9}
+.t-card img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:transform 1s var(--ease)}
+.t-card:hover img{transform:scale(1.05)}
+.t-meta{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:14px 8px 6px;align-items:start}
+.t-num{font:400 24px/1 var(--serif);font-style:italic;color:var(--muted);padding-top:2px}
+.t-meta h3{font:800 17px/1.25 var(--display);letter-spacing:-.01em;color:var(--ink);margin:0}
+.t-meta p{margin:5px 0 0;font-size:14.5px;line-height:1.5;color:var(--muted)}
+.t-grid .t-card:nth-child(3n+2){transition-delay:.08s}
+.t-grid .t-card:nth-child(3n){transition-delay:.16s}
+.t-note{font-size:13px;color:var(--muted);margin-top:18px}
+.pitch-img{aspect-ratio:1/1}
+
+@media (max-width:1100px){.t-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:860px){
+  .t-head{grid-template-columns:1fr}
+  .t-hero{display:none}
+  .t-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .t-card{padding:6px;border-radius:14px}
+  .t-card figure{border-radius:10px;aspect-ratio:4/3}
+  .t-meta{grid-template-columns:1fr;gap:4px;padding:10px 4px 4px}
+  .t-num{font-size:18px}
+  .t-meta h3{font-size:14.5px}
+  .t-meta p{font-size:12.5px;line-height:1.45}
+}
+
+/* v8: Claude portrait */
+.claude-shot{position:relative;margin:20px 0 0;border-radius:18px;overflow:hidden;background:#f7f1ea;aspect-ratio:928/1152;max-height:620px}
+.claude-shot img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 30%;transition:transform 1s var(--ease)}
+.claude-shot:hover img{transform:scale(1.03)}
+.claude-shot figcaption{position:absolute;left:10px;bottom:10px;right:10px;width:max-content;max-width:calc(100% - 20px);background:rgba(10,10,10,.72);backdrop-filter:blur(6px);color:#fff;font:600 12px var(--display);padding:6px 10px;border-radius:99px}
+@media (min-width:861px){.claude-shot{aspect-ratio:auto;height:520px}}
+
+/* v10: lessons with statue images */
+.know-head{display:flex;flex-direction:column;gap:6px;margin-bottom:clamp(22px,3vw,34px)}
+.know-title{font:700 clamp(28px,3.4vw,46px)/1.1 var(--display);letter-spacing:-.03em;color:var(--ink)}
+.know-title em{font-family:var(--serif);font-weight:400;font-style:italic}
+.know-grid{gap:clamp(14px,1.6vw,22px);align-items:stretch}
+.know-card{padding:10px 10px 26px;gap:0;overflow:hidden;transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.know-card:hover{transform:translateY(-6px);box-shadow:0 30px 70px rgba(0,0,0,.14)}
+.k-img{position:relative;margin:0;border-radius:18px;overflow:hidden;aspect-ratio:16/10;background:#2a2a2a}
+.k-img img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transform:scale(1.1);transition:filter 1.4s var(--ease) .5s,transform 1.6s var(--ease)}
+.know-card.in .k-img img{filter:grayscale(0);transform:scale(1)}
+.know-card:hover .k-img img{transform:scale(1.05)}
+.k-marketing img{object-position:40% 50%}
+.k-sales img{object-position:50% 30%}
+.k-promotion img{object-position:70% 22%}
+.k-tag{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.92);color:#1E1D1A;font:700 12.5px var(--display);padding:7px 12px;border-radius:99px;box-shadow:0 6px 18px rgba(0,0,0,.15)}
+.know-card:nth-child(2) .k-tag{background:#1E1D1A;color:#fff}
+.k-body{display:flex;flex-direction:column;gap:10px;padding:22px 18px 0}
+.k-kicker{font:700 11.5px var(--display);letter-spacing:.12em;text-transform:uppercase;opacity:.6}
+.know-card h3{margin-top:-2px}
+.k-line{font-size:16.5px;line-height:1.6}
+.k-label{font:700 11.5px var(--display);letter-spacing:.12em;text-transform:uppercase;opacity:.6;margin-top:8px}
+.know-card .k-body ol{margin-top:0;padding-top:12px}
+@media (max-width:860px){
+  .know-card{padding:8px 8px 22px}
+  .k-body{padding:18px 12px 0}
+  .k-img{aspect-ratio:16/9;border-radius:14px}
+}
+@media (prefers-reduced-motion:reduce){.k-img img{filter:none;transform:none}}
+
+/* v11: ChatGPT meme strip */
+.gpt-me{display:grid;grid-template-columns:44% 1fr;gap:14px;align-items:center;margin-top:12px;padding:8px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
+.gpt-me figure{margin:0;border-radius:11px;overflow:hidden;aspect-ratio:1376/768}
+.gpt-me img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 0;transition:transform .8s var(--ease)}
+.gpt-me:hover img{transform:scale(1.06)}
+.gpt-me p{display:flex;flex-direction:column;gap:3px;font-size:14px;line-height:1.45;color:rgba(255,255,255,.72)}
+.gpt-me b{font:700 15px var(--display);color:#fff}
+@media (max-width:860px){.gpt-me{grid-template-columns:46% 1fr;gap:10px}.gpt-me p{font-size:12.5px}.gpt-me b{font-size:13.5px}}
+
+/* v13: mugshot hero */
+.hero-visual{align-items:center}
+.hero-shot{position:relative;z-index:2;margin:0;width:min(88%,560px);aspect-ratio:1;border-radius:50%;overflow:hidden;background:#111;box-shadow:0 40px 90px rgba(0,0,0,.28),0 0 0 10px #fff;opacity:0;transform:scale(.82) rotate(-8deg);transition:opacity .9s var(--ease) .5s,transform 1.4s var(--ease) .5s}
+body.ready .hero-shot{opacity:1;transform:none}
+.hero-shot img{display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.07);animation:shotbreathe 9s ease-in-out infinite}
+.hero-shot .flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+body.ready .hero-shot .flash{animation:shotflash 1.1s ease-out 1.1s 1 both}
+.hero-shot:hover .flash{animation:shotflash .7s ease-out 1 both}
+.hero-textring{position:absolute;z-index:1;left:50%;top:50%;width:min(104%,680px);aspect-ratio:1;translate:-50% -50%;animation:ringspin2 36s linear infinite;pointer-events:none}
+.hero-textring text{font:700 9px var(--display);fill:var(--ink);opacity:.55}
+@keyframes shotflash{0%{opacity:0}12%{opacity:.95}100%{opacity:0}}
+@keyframes shotbreathe{0%,100%{transform:scale(1.07)}50%{transform:scale(1.11)}}
+@keyframes ringspin2{to{rotate:360deg}}
+.hero-visual .chip{z-index:3}
+@media (max-width:860px){
+  .hero-visual{aspect-ratio:1/1;margin-top:34px}
+  .hero-shot{width:80%;box-shadow:0 26px 60px rgba(0,0,0,.25),0 0 0 7px #fff}
+  .hero-textring{width:100%}
+}
+@media (prefers-reduced-motion:reduce){.hero-shot img,.hero-textring{animation:none}.hero-shot .flash{display:none}}
+
+/* v14: contact punch portrait */
+.contact-grid{display:grid;grid-template-columns:1fr minmax(280px,.62fr);gap:clamp(30px,5vw,80px);align-items:center}
+.contact-main{order:1;min-width:0}
+.contact-punch{order:2;position:relative;margin:0;border-radius:24px;overflow:visible;transform:rotate(2deg)}
+.contact-punch img{display:block;width:100%;height:auto;border-radius:24px;box-shadow:0 40px 90px rgba(0,0,0,.45),0 0 0 8px #fff}
+.contact-punch figcaption{position:absolute;right:-10px;bottom:24px;background:var(--yellow);color:var(--ink);font:700 14px var(--display);padding:10px 16px;border-radius:99px;box-shadow:0 14px 30px rgba(0,0,0,.3);transform:rotate(-4deg)}
+.contact-punch.reveal{opacity:0;transform:translateX(-60px) rotate(-8deg)}
+.contact-punch.reveal.in{opacity:1;animation:punchhit 1.1s cubic-bezier(.2,.9,.3,1.2) both}
+.contact-punch:hover{animation:punchshake .5s ease-out}
+@keyframes punchhit{0%{opacity:0;transform:translateX(-60px) rotate(-8deg)}55%{opacity:1;transform:translateX(14px) rotate(4deg)}72%{transform:translateX(-8px) rotate(.5deg)}86%{transform:translateX(4px) rotate(2.6deg)}100%{opacity:1;transform:rotate(2deg)}}
+@keyframes punchshake{0%,100%{transform:rotate(2deg)}25%{transform:translateX(10px) rotate(4deg)}50%{transform:translateX(-6px) rotate(0deg)}75%{transform:translateX(3px) rotate(3deg)}}
+@media (max-width:860px){
+  .contact-grid{grid-template-columns:1fr;gap:34px}
+  .contact-punch{order:0;width:min(78%,340px);margin:0 auto 0 4px}
+  .contact-punch figcaption{font-size:12.5px;right:-14px;bottom:18px}
+}
+@media (prefers-reduced-motion:reduce){.contact-punch.reveal,.contact-punch.reveal.in{animation:none;opacity:1;transform:rotate(2deg)}}

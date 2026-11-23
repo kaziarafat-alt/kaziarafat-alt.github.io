@@ -1,0 +1,98 @@
+/* ===================== v15 ===================== */
+:root{--orange:#FF5B1F;--orange-2:#FF8A3D;--night:#0E0E10}
+
+/* ---------- Work: notes, roles, projects ---------- */
+.g-note{width:300px;padding:24px;background:var(--ink);color:#fff;display:flex;flex-direction:column;gap:14px;align-self:stretch}
+.g-note .gn-k{font:700 12px var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--orange-2)}
+.g-note ul{display:grid;gap:14px}
+.g-note li{display:flex;flex-direction:column;font-size:14px;color:rgba(255,255,255,.72);line-height:1.45}
+.g-note li b{font:700 16px var(--display);color:#fff}
+.case-roles{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.case-roles li{font:600 12.5px var(--display);padding:6px 11px;border-radius:99px;background:var(--paper);border:1px solid var(--line)}
+.proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.proj{background:var(--card);border-radius:20px;overflow:hidden;border:1px solid var(--line);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.proj:hover{transform:translateY(-4px);box-shadow:0 24px 60px rgba(0,0,0,.08)}
+.proj.wide{grid-column:1/-1;display:grid;grid-template-columns:1.3fr 1fr;align-items:center}
+.proj-shot{background:#eceae4;padding:10px 10px 0}
+.proj-shot .bar{display:flex;align-items:center;gap:6px;background:#fff;border-radius:10px 10px 0 0;padding:8px 12px;font:600 12px var(--display);color:var(--muted)}
+.proj-shot .bar i{width:8px;height:8px;border-radius:50%;background:#ddd}
+.proj-shot .bar span{margin-left:8px}
+.proj-shot img{display:block;width:100%;height:auto}
+.proj-body{padding:22px}
+.proj-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px;min-height:40px}
+.proj-logo{height:34px;width:auto;max-width:140px;object-fit:contain}
+.proj-logo.dark{background:#111;padding:6px 10px;border-radius:8px}
+.proj-k{font:700 11.5px var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.proj h4{font:800 22px/1.15 var(--display);letter-spacing:-.02em;color:var(--ink)}
+.proj p{margin-top:8px;font-size:15px;line-height:1.55;color:var(--ink-2)}
+.proj.event{background:var(--night);border-color:var(--night)}
+.proj.event h4{color:#fff}.proj.event p{color:rgba(255,255,255,.72)}.proj.event .proj-k{color:rgba(255,255,255,.55)}
+.proj-badge{font:700 12px var(--display);background:var(--orange);color:#fff;padding:6px 12px;border-radius:99px}
+
+/* ---------- kinetic middle band ---------- */
+.mid-band{position:relative;overflow:hidden;padding:30px 0;margin:clamp(30px,5vw,60px) 0 0;transform:rotate(-2deg) scale(1.04)}
+.mb-row{display:flex;width:max-content;font:400 clamp(44px,7vw,96px)/1 "Anton",var(--display);letter-spacing:.01em;color:var(--orange);animation:mbmove 38s linear infinite;white-space:nowrap}
+.mb-row.rev{animation-direction:reverse;animation-duration:46s;color:transparent;-webkit-text-stroke:1.5px var(--ink);margin-top:6px}
+.mb-row span{padding-right:.3em}
+@keyframes mbmove{to{transform:translateX(-50%)}}
+
+/* ---------- Ventures ---------- */
+.zt .zt-board{background:var(--night);border-radius:22px;padding:22px;color:#fff;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden}
+.zt .zt-board::before{content:"";position:absolute;right:-30%;top:-40%;width:80%;aspect-ratio:1;background:radial-gradient(closest-side,rgba(124,92,255,.35),transparent);pointer-events:none}
+.zt-head{display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative}
+.zt-head p{font:800 22px/1.1 var(--display);text-align:right}
+.zt-head em{font-family:var(--serif);font-weight:400;color:var(--orange-2)}
+.zt-products{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;position:relative}
+.zt-p{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px;transition:transform .5s var(--ease),background .4s}
+.zt-p:hover{transform:translateY(-4px);background:rgba(255,255,255,.1)}
+.zt-p b{font:800 17px var(--display)}
+.zt-p small{font-size:12.5px;line-height:1.45;color:rgba(255,255,255,.7)}
+.zt-p .live,.zt-p .soon{align-self:flex-start;font:700 10.5px var(--display);padding:3px 8px;border-radius:99px}
+.zt-p .live{background:#d6f5e3;color:#11643b}.zt-p .soon{background:#fff1c2;color:#7a5a00}
+.zt-clients{position:relative;border-top:1px solid rgba(255,255,255,.14);padding-top:14px}
+.zt-k{font:700 11px var(--display);letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:10px}
+.zt-clients ul{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.zt-clients li{display:flex;flex-direction:column;font-size:13px;color:rgba(255,255,255,.75);padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.04)}
+.zt-clients li b{font:700 12px var(--display);color:var(--orange-2);text-transform:uppercase;letter-spacing:.06em}
+.hy-media{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:repeat(3,1fr);gap:10px}
+.hy-media img{width:100%;height:100%;object-fit:cover;border-radius:16px;transition:transform .8s var(--ease)}
+.hy-media img:hover{transform:scale(1.03)}
+.hy-media .hy-main{grid-row:1/4;aspect-ratio:auto}
+.hy-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:18px}
+.hy-facts div{background:var(--paper);border-radius:14px;padding:12px}
+.hy-facts b{display:block;font:800 20px/1 var(--display);color:#5a1414;letter-spacing:-.02em}
+.hy-facts span{display:block;font-size:12.5px;color:var(--muted);margin-top:5px;line-height:1.3}
+.hy-how{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.hy-how li{font:600 12.5px var(--display);padding:7px 12px;border-radius:99px;background:#5a1414;color:#fff}
+
+/* ---------- Lessons: tag to top so the poster words stay clear ---------- */
+.k-tag{top:12px;bottom:auto}
+.k-marketing img{object-position:50% 50%}
+.k-sales img{object-position:50% 40%}
+.k-promotion img{object-position:55% 40%}
+
+/* ---------- Contact poster ---------- */
+.contact-punch{transform:rotate(0)}
+.contact-punch.reveal{transform:translateX(-60px) rotate(-6deg)}
+.contact-punch img{box-shadow:0 40px 100px rgba(0,0,0,.5);border:none}
+.contact-punch .pp-word{position:absolute;left:-4%;right:-4%;bottom:-6%;font:400 clamp(70px,9vw,150px)/.86 "Anton",var(--display);color:var(--orange);text-transform:uppercase;letter-spacing:.005em;text-shadow:0 10px 40px rgba(0,0,0,.35);pointer-events:none}
+.contact-punch .pp-label{position:absolute;left:16px;top:16px;font:700 11px var(--display);letter-spacing:.14em;color:#111;background:#fff;padding:6px 10px;border-radius:6px}
+@keyframes punchhit{0%{opacity:0;transform:translateX(-60px) rotate(-6deg)}55%{opacity:1;transform:translateX(14px) rotate(2deg)}72%{transform:translateX(-8px) rotate(-1deg)}86%{transform:translateX(4px) rotate(.5deg)}100%{opacity:1;transform:none}}
+@keyframes punchshake{0%,100%{transform:none}25%{transform:translateX(10px) rotate(2deg)}50%{transform:translateX(-6px) rotate(-1.5deg)}75%{transform:translateX(3px) rotate(1deg)}}
+
+@media (max-width:1100px){.proj.wide{grid-template-columns:1fr}}
+@media (max-width:860px){
+  .g-note{width:260px}
+  .proj-grid{grid-template-columns:1fr}
+  .zt-products{grid-template-columns:1fr}
+  .zt-clients ul{grid-template-columns:1fr}
+  .zt-head p{font-size:18px}
+  .hy-facts{grid-template-columns:1fr 1fr}
+  .hy-media{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .hy-media .hy-main{grid-column:1/-1;grid-row:auto;aspect-ratio:1}
+  .hy-media img:not(.hy-main){aspect-ratio:1}
+  .hy-media img:nth-child(4){display:none}
+  .mid-band{padding:18px 0}
+  .contact-punch .pp-word{font-size:64px}
+}
+@media (prefers-reduced-motion:reduce){.mb-row{animation:none}}

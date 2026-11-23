@@ -1,0 +1,79 @@
+/* ===================== v5: eye comfort + ventures ===================== */
+:root{--paper:#F6F3EC;--paper-2:#EDE8DD;--ink:#1E1D1A;--ink-2:#34322D;--muted:#5E5A52;--line:#DED8CB}
+body{font-size:17.5px;line-height:1.75;color:var(--ink-2);letter-spacing:.003em}
+p{text-wrap:pretty}
+.lead,.hero-sub,.ch-plain,.case-info p,.duo-intro,.v-body p,.contact-sub{max-width:62ch}
+.h-xl{font-weight:700;letter-spacing:-.028em;line-height:1.08}
+.h-xl em{font-size:1.04em}
+.hero-title{font-weight:700;letter-spacing:-.04em}
+.statement{font:500 clamp(23px,2.7vw,38px)/1.42 var(--display);letter-spacing:-.015em;color:var(--ink-2);max-width:980px}
+.statement em{font-size:1.05em}
+.lead{line-height:1.75}
+.lead.dark,.cr-note,.stat span,.client p,.case-info h3 span{color:var(--muted)}
+.ai .lead,.video-sec .lead,.pitch .lead{color:rgba(255,255,255,.84)}
+.use p,.duo-list li{color:rgba(255,255,255,.8)}
+.chapter li,.know-card li{line-height:1.6}
+.know-card p{opacity:.92;line-height:1.65}
+.g-item figcaption{font-size:13px}
+.eyebrow{letter-spacing:.1em}
+
+/* signature */
+.signature{font-family:"Mrs Saint Delafield",cursive;font-size:clamp(54px,6vw,80px);line-height:1;color:var(--ink);margin-top:14px;transform:rotate(-4deg);transform-origin:left;opacity:.9}
+.signature.reveal{transform:translateY(20px) rotate(-4deg)}
+.signature.reveal.in{transform:rotate(-4deg)}
+.signature.light{color:var(--yellow);margin:34px 0 -6px}
+
+/* ChatGPT gallery */
+.gpt-gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.gg{position:relative;border-radius:14px;overflow:hidden;background:#0b1a14}
+.gg img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.gg:hover img{transform:scale(1.04)}
+.gg.tall{aspect-ratio:1/1}
+.gg.wide{grid-column:1/-1;aspect-ratio:16/9}
+.gg figcaption{position:absolute;left:8px;bottom:8px;background:rgba(10,10,10,.72);backdrop-filter:blur(6px);color:#fff;font:600 12px var(--display);padding:6px 10px;border-radius:99px}
+
+/* VENTURES */
+.ventures{padding-block:clamp(90px,12vw,160px)}
+.venture{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(20px,3vw,44px);align-items:center;background:var(--card);border-radius:28px;padding:clamp(18px,2.4vw,32px);margin-top:clamp(36px,5vw,60px);box-shadow:0 30px 70px rgba(0,0,0,.06)}
+.venture.flip .v-media{order:2}
+.v-media{display:grid;gap:12px}
+.v-media img{border-radius:18px;width:100%;object-fit:cover}
+.v-main{aspect-ratio:1176/570;box-shadow:0 20px 40px rgba(0,0,0,.18)}
+.v-sub{aspect-ratio:1176/416}
+.v-media.haya{grid-template-columns:1fr 1fr}
+.v-sq{aspect-ratio:1/1}
+.v-banner{grid-column:1/-1;aspect-ratio:1249/395}
+.v-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.v-logo{height:40px;width:auto;border-radius:10px;padding:6px 10px}
+.v-logo.dark{background:#0b1424}
+.v-word{font:400 34px/1 var(--serif);letter-spacing:.28em;color:#5a1414}
+.v-body h3{font:800 clamp(28px,2.8vw,40px)/1.1 var(--display);letter-spacing:-.03em;margin:16px 0 10px;color:var(--ink)}
+.v-body p{color:var(--ink-2)}
+.v-list{display:grid;gap:8px;margin-top:18px}
+.v-list li{display:grid;grid-template-columns:auto auto 1fr;align-items:center;gap:4px 10px;padding:12px 14px;border-radius:14px;background:var(--paper)}
+.v-list b{font:700 16px var(--display);color:var(--ink)}
+.v-list small{grid-column:1/-1;font-size:14px;color:var(--muted)}
+.v-list .live,.v-list .soon{font:700 11px var(--display);padding:3px 8px;border-radius:99px;justify-self:start}
+.v-list .live{background:#d6f5e3;color:#11643b}
+.v-list .soon{background:#fff1c2;color:#7a5a00}
+.v-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.v-stats b{display:block;font:800 24px/1 var(--display);color:var(--ink);letter-spacing:-.03em}
+.v-stats span{display:block;font-size:13px;color:var(--muted);line-height:1.35;margin-top:5px}
+.v-note{margin-top:16px;font-size:15px;color:var(--muted)!important}
+.v-links{display:flex;gap:16px;flex-wrap:wrap}
+.v-link{display:inline-block;margin-top:16px;font:700 15px var(--display);color:var(--ink);border-bottom:2px solid var(--yellow);padding-bottom:2px}
+.learning{margin-top:clamp(30px,4vw,50px);padding:18px 22px;border-radius:18px;background:var(--paper-2);font-size:16px;color:var(--ink-2)}
+.learning span{font:700 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:10px}
+
+@media (max-width:860px){
+  body{font-size:16.5px;line-height:1.72}
+  .statement{font-size:clamp(21px,5.6vw,26px)}
+  .signature{font-size:52px}
+  .venture{grid-template-columns:1fr;padding:14px;border-radius:22px}
+  .venture.flip .v-media{order:0}
+  .v-body{padding:4px 6px 8px}
+  .v-stats b{font-size:20px}
+  .gpt-gallery{gap:8px}
+  .gg figcaption{font-size:11px;padding:5px 9px;left:6px;bottom:6px;right:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ai{padding-bottom:64px}
+}
