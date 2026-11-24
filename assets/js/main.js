@@ -293,3 +293,9 @@
     tSize(); tFrame();
   }
 })();
+
+/* v18: play the website-scroll video only while visible */
+(() => {
+  const v = document.querySelector('.und-t video'); if (!v || !('IntersectionObserver' in window)) return;
+  new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { v.preload = 'auto'; v.play().catch(() => {}); } else v.pause(); }), { threshold: .35 }).observe(v);
+})();
