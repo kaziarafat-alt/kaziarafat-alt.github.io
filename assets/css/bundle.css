@@ -1347,3 +1347,30 @@ body{background:#F4F1EA;padding-bottom:84px}
 body.m-lock{overflow:hidden}
 }
 @media (max-width:760px) and (prefers-reduced-motion:reduce){.m-app *,.m-app *:before{animation:none!important}.m-r{opacity:1;transform:none}}
+@media (max-width:760px){
+.m-app{--o:#C8552A}
+.m-h,.m-h2{font-weight:700;letter-spacing:-.035em}
+.m-sec{padding-top:44px}
+.m-ey{font-weight:700;letter-spacing:.22em;color:#8a857a;display:flex;align-items:center;gap:8px}
+.m-ey:before{content:"";width:22px;height:1px;background:currentColor}
+.m-ey.lime{color:var(--lime)}
+.m-stk{background:rgba(255,255,255,.88)!important;backdrop-filter:blur(8px);font-weight:700!important;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.m-side{background:#fff!important;color:#141414!important;border:1px solid #e6e0d4}
+.m-side i{background:#141414!important;color:#fff;font:700 13px Manrope!important;border-radius:50%}
+.m-side.cre i{background:var(--o)!important}.m-side.inn i{background:#5f7d16!important}
+.m-side:before{display:none}
+.m-marq{transform:none;background:transparent;color:#141414;border-top:1px solid #d8d1c3;border-bottom:1px solid #d8d1c3}
+.m-marq span{font:400 italic 20px 'Instrument Serif',serif;text-transform:none;letter-spacing:0}
+.m-pills div{border:1px solid #e6e0d4}
+.m-wc em{background:#141414;color:#fff}
+.m-sk4{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+.m-sk4 figure{margin:0;background:#fff;border-radius:18px;overflow:hidden;border:1px solid #e6e0d4}
+.m-sk4 img{width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 30%}
+.m-sk4 figcaption{padding:9px 10px}.m-sk4 b{display:block;font:700 13px Manrope}.m-sk4 span{font-size:11px;color:#8a857a}
+.m-tab{background:rgba(20,20,20,.86)}
+.m-tab a.on{background:#F4F1EA;color:#141414}
+}
+@media (max-width:760px){.m-app .m-side.pro,.m-app .m-side.cre,.m-app .m-side.inn{background:#fff!important;color:#141414!important}}
+.s-img img[src*="digital-v3"]{object-position:50% 55%}.s-img img[src*="promotion-v3"]{object-position:42% 50%}.s-img img[src*="sales-v3"]{object-position:55% 40%}.s-img img[src*="pm-v3"]{object-position:40% 60%}
+.m-sk4 img[src*="promotion-v3"]{object-position:42% 50%}.m-sk4 img[src*="pm-v3"]{object-position:40% 60%}
+.s-img img[src*="digital-v4"]{object-position:50% 35%}.s-img img[src*="promotion-v4"]{object-position:50% 40%}
