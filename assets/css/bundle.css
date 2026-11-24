@@ -1201,6 +1201,21 @@ body.ready .hero-desk{animation:deskin 1.1s cubic-bezier(.2,.9,.3,1.1) .5s both!
 .t-card img{max-height:190px}
 .n3{left:86%}.n2{left:80%}.n4{left:76%}
 @media (max-width:860px){.cre.wrap{padding-inline:var(--gut)}.n3{left:82%}.n7{left:14%}}
+.meme{margin-top:20px;padding:16px;border-radius:18px;background:rgba(0,0,0,.28);border:1px dashed rgba(198,244,50,.35);display:grid;gap:8px}
+.mm-msg{max-width:82%;padding:9px 13px;border-radius:16px;font-size:14px;line-height:1.35}
+.mm-msg b{display:block;font:800 10px Manrope;letter-spacing:.12em;text-transform:uppercase;opacity:.6;margin-bottom:2px}
+.mm-msg.them{background:#fff;color:#141414;border-bottom-left-radius:4px}
+.mm-msg.me{justify-self:end;background:#C6F432;color:#111;border-bottom-right-radius:4px}
+.mm-team{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:4px}
+.mm-k{font:800 10px Manrope;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-right:2px}
+.mm-ai{display:inline-flex;align-items:center;gap:6px;padding:6px 10px 6px 6px;border-radius:99px;background:#fff;color:#111;font:700 12px Manrope;opacity:0;transform:translateY(8px) scale(.9);transition:.5s cubic-bezier(.2,1.3,.3,1)}
+.mm-ai img{width:18px;height:18px;object-fit:contain}
+.meme.in .mm-ai{opacity:1;transform:none}
+.meme.in .mm-ai:nth-of-type(3){transition-delay:.15s}.meme.in .mm-ai:nth-of-type(4){transition-delay:.3s}.meme.in .mm-ai:nth-of-type(5){transition-delay:.45s}
+.meme .mm-msg{opacity:0;transform:translateY(10px);transition:.5s}.meme.in .mm-msg{opacity:1;transform:none}.meme.in .mm-msg.me{transition-delay:.5s}
+.mm-typing{display:inline-flex;gap:3px;margin-left:4px}.mm-typing i{width:5px;height:5px;border-radius:50%;background:#C6F432;animation:mmT 1.2s infinite}.mm-typing i:nth-child(2){animation-delay:.2s}.mm-typing i:nth-child(3){animation-delay:.4s}
+@keyframes mmT{0%,60%,100%{opacity:.25;transform:none}30%{opacity:1;transform:translateY(-3px)}}
+.cre-c img[src*="video-edit"]{object-position:40% 50%}
 .m-app,.m-tab,.m-sheet,.m-film{display:none}
 @media (max-width:760px){
 main>*:not(#m),footer.contact,.ticker,.mid-band,.menu,.menu-btn,.cursor-dot,.nav-links{display:none!important}
