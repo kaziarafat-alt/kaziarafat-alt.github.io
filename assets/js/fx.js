@@ -68,3 +68,26 @@
     if (h) addEventListener('deviceorientation', e => { if (e.gamma == null) return; h.style.transform = `perspective(800px) rotateY(${Math.max(-8, Math.min(8, e.gamma / 4))}deg) rotateX(${Math.max(-6, Math.min(6, (e.beta - 45) / 6))}deg)`; }, { passive: true });
   }
 })();
+
+/* v2: stack-then-spread ("gather") for clients, lessons and mobile groups */
+(() => {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const groups = ['.cr-grid', '.know-grid', '.m-sides', '.m-pills', '.m-sk4', '.m-tg', '.m-bento'];
+  const play = g => {
+    const kids = [...g.children].filter(k => k.offsetParent !== null); if (kids.length < 2) return;
+    const gr = g.getBoundingClientRect(), cx = gr.left + gr.width / 2, cy = gr.top + gr.height / 2;
+    kids.forEach((k, i) => {
+      k.classList.add('in'); const r = k.getBoundingClientRect();
+      const dx = cx - (r.left + r.width / 2), dy = cy - (r.top + r.height / 2), rot = (i - (kids.length - 1) / 2) * 6;
+      k.style.transition = 'none'; k.style.opacity = '1';
+      k.style.transform = `translate(${dx}px,${dy}px) rotate(${rot}deg) scale(.82)`; k.style.zIndex = kids.length - i;
+    });
+    g.offsetHeight; // reflow
+    setTimeout(() => kids.forEach((k, i) => {
+      k.style.transition = `transform .9s cubic-bezier(.2,1.25,.3,1) ${i * 90}ms`; k.style.transform = '';
+      setTimeout(() => { k.style.transition = ''; k.style.zIndex = ''; }, 1000 + i * 90);
+    }), 350);
+  };
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { io.unobserve(e.target); play(e.target); } }), { threshold: .35 });
+  addEventListener('load', () => groups.forEach(s => document.querySelectorAll(s).forEach(g => { g.classList.add('fx-gather'); io.observe(g); })));
+})();
