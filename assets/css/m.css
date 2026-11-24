@@ -188,3 +188,30 @@
 .s-img img[src*="digital-v3"]{object-position:50% 55%}.s-img img[src*="promotion-v3"]{object-position:42% 50%}.s-img img[src*="sales-v3"]{object-position:55% 40%}.s-img img[src*="pm-v3"]{object-position:40% 60%}
 .m-sk4 img[src*="promotion-v3"]{object-position:42% 50%}.m-sk4 img[src*="pm-v3"]{object-position:40% 60%}
 .s-img img[src*="digital-v4"]{object-position:50% 35%}.s-img img[src*="promotion-v4"]{object-position:50% 40%}
+@media (max-width:760px){
+  .m-pills div{background:#FBE6D8;border:0;box-shadow:inset 0 0 0 1px rgba(200,85,42,.12)}
+  .m-pills b{color:#B9471F}.m-pills b:after{color:#E8622C}.m-pills span{color:#8a5a44}
+  .m-filmcard{position:relative;display:block!important;width:100%;margin:14px 0 0;border-radius:24px;overflow:hidden;aspect-ratio:16/10;background:#111}
+  .m-filmcard img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;transition:transform 1.2s}
+  .m-filmcard:active img{transform:scale(1.04)}
+  .m-filmcard:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.75))}
+  .m-play{position:absolute;left:50%;top:42%;width:64px;height:64px;margin:-32px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;z-index:2;box-shadow:0 0 0 0 rgba(255,255,255,.6);animation:mPing 2s infinite}
+  .m-play i{width:0;height:0;border-left:18px solid #111;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:5px}
+  @keyframes mPing{70%{box-shadow:0 0 0 18px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+  .m-fl{position:absolute;left:14px;bottom:12px;z-index:2;color:#fff;text-align:left}.m-fl b{display:block;font:800 16px Manrope}.m-fl em{font-style:normal;font-size:11px;opacity:.8}
+  .m-side{grid-template-columns:62px 1fr 18px!important}
+  .m-side i{position:relative;width:62px!important;height:62px!important;border-radius:16px!important;overflow:visible;background:none!important}
+  .m-side i img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;border-radius:16px}
+  .m-side i u{position:absolute;right:-6px;bottom:-6px;width:24px;height:24px;border-radius:50%;background:#141414;color:#fff;font:800 10px/24px Manrope;text-align:center;text-decoration:none;border:2px solid #fff}
+  .m-side.cre i u{background:#C8552A}.m-side.inn i u{background:#5f7d16}
+  .m-logo{width:72px;height:56px;border-radius:14px;background:#fff;display:grid;place-items:center;border:1px solid #ece6da;overflow:hidden}
+  .m-logo img{max-width:62px;max-height:40px;object-fit:contain}
+  .m-logo.dk{background:#0c1220;border-color:#0c1220}
+  .m-ti{grid-template-columns:72px 1fr 14px!important}
+  .m-tl:before{left:36px}
+  .m-vlogo{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;height:190px;background:radial-gradient(circle at 50% 40%,#1b2a4a,#070b16)}
+  .m-vlogo img{width:70%;max-width:220px}.m-vlogo small{color:#9fb3d9;font:700 11px Manrope;letter-spacing:.06em}
+  .sh-zlogo{height:150px;border-radius:20px;background:radial-gradient(circle at 50% 40%,#1b2a4a,#070b16);display:grid;place-items:center;margin-bottom:14px}.sh-zlogo img{width:65%}
+}
+@media (max-width:760px){.m-vc .m-vlogo img{width:70%!important;height:auto!important;object-fit:contain}.m-stories img[src*="logo-zynotech"]{object-fit:contain;background:#0c1220}}
+@media (max-width:760px){.m-app .m-vc span.m-vlogo{display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0;height:190px}.m-app .m-vc span.m-vlogo small{display:block;color:#9fb3d9}}
