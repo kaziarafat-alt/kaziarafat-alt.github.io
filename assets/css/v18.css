@@ -181,3 +181,4 @@
 .vw-btn:hover{transform:translateY(-2px)}
 @media (max-width:900px){.video-frame{grid-row:auto}.v-why{grid-column:auto}}
 .stat .st-k{align-self:flex-start}
+img[src*="promotion-v5"]{object-position:18% 45%!important}

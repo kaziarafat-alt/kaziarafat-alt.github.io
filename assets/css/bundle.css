@@ -1252,6 +1252,7 @@ body.ready .hero-desk{animation:deskin 1.1s cubic-bezier(.2,.9,.3,1.1) .5s both!
 .vw-btn:hover{transform:translateY(-2px)}
 @media (max-width:900px){.video-frame{grid-row:auto}.v-why{grid-column:auto}}
 .stat .st-k{align-self:flex-start}
+img[src*="promotion-v5"]{object-position:18% 45%!important}
 .m-app,.m-tab,.m-sheet,.m-film{display:none}
 @media (max-width:760px){
 main>*:not(#m),footer.contact,.ticker,.mid-band,.menu,.menu-btn,.cursor-dot,.nav-links{display:none!important}
