@@ -215,3 +215,19 @@
 }
 @media (max-width:760px){.m-vc .m-vlogo img{width:70%!important;height:auto!important;object-fit:contain}.m-stories img[src*="logo-zynotech"]{object-fit:contain;background:#0c1220}}
 @media (max-width:760px){.m-app .m-vc span.m-vlogo{display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0;height:190px}.m-app .m-vc span.m-vlogo small{display:block;color:#9fb3d9}}
+@media (max-width:760px){
+  .m-new{display:flex!important;align-items:center;gap:8px;margin:18px 0 0;font-size:13.5px;color:var(--muted,#666)}
+  .m-new b{color:#E8622C}
+  .m-new i{width:9px;height:9px;flex:none;border-radius:50%;background:#E8622C;animation:csPulse 1.6s infinite}
+  .m-filmcard{box-shadow:0 0 0 3px #FDCA01,0 20px 40px rgba(232,98,44,.25)}
+  .m-trust{display:grid!important;gap:10px;margin:16px 0 4px;padding:16px;border-radius:22px;background:#fff;border:1px solid rgba(0,0,0,.07);border-left:5px solid #E8622C;box-shadow:0 12px 28px rgba(0,0,0,.06)}
+  .mt-k{font:700 10.5px var(--display,sans-serif);letter-spacing:.12em;text-transform:uppercase;color:#E8622C}
+  .mt-logos{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .mt-logos img{width:100%;height:46px;object-fit:contain;padding:6px;border-radius:12px;background:#F6F2EA}
+  .m-trust p{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:2px 0 0}
+  .m-trust p b{font:800 15px var(--display,sans-serif);padding:4px 10px;border-radius:99px;background:#F3EEE4;color:#1E1D1A}
+  .m-trust p b.y{background:#FDCA01}
+  .m-trust p i{font-style:normal;color:#E8622C;font-weight:800}
+  .m-trust small{font-size:12.5px;color:#666;line-height:1.45}
+}
+@media (max-width:760px){.m-new{display:block!important}.m-new i{display:inline-block;margin-right:8px;vertical-align:1px}}
