@@ -91,3 +91,12 @@
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { io.unobserve(e.target); play(e.target); } }), { threshold: .35 });
   addEventListener('load', () => groups.forEach(s => document.querySelectorAll(s).forEach(g => { g.classList.add('fx-gather'); io.observe(g); })));
 })();
+
+/* inspire clip: play in view, tap for sound */
+(() => {
+  document.querySelectorAll('.in-vid').forEach(w => {
+    const v = w.querySelector('video'), b = w.querySelector('.in-snd');
+    new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? (v.preload = 'auto', v.play().catch(() => {})) : v.pause()), { threshold: .4 }).observe(v);
+    b.addEventListener('click', () => { v.muted = !v.muted; if (!v.muted) { v.currentTime = 0; v.play(); } b.classList.toggle('on', !v.muted); b.textContent = v.muted ? '🔇 Tap for sound' : '🔊 Sound on'; });
+  });
+})();
